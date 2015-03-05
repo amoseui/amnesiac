@@ -29,21 +29,9 @@ public class Inventory {
 		List<Guitar> matchingGuitars = new LinkedList<Guitar>();
 		for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
 			Guitar guitar = (Guitar)i.next();
-			GuitarSpec guitarSpec = guitar.getSpec();
-			// 일련번호는 유일한 값이니까 무시
-			// 가격은 유일한 값이니깐 무시
-			if (searchSpec.getBuilder() != guitarSpec.getBuilder())
-				continue;
-			String model = searchSpec.getModel().toLowerCase();
-			if ((model != null) && (!model.equals("")) && (!model.equals(guitarSpec.getModel().toLowerCase())))
-				continue;
-			if (searchSpec.getType() != guitarSpec.getType())
-				continue;
-			if (searchSpec.getBackWood() != guitarSpec.getBackWood())
-				continue;
-			if (searchSpec.getTopWood() != guitarSpec.getTopWood())
-				continue;
-			matchingGuitars.add(guitar);
+			if (guitar.getSpec().matches(searchSpec)) {
+				matchingGuitars.add(guitar);
+			}
 		}
 		return matchingGuitars;
 	}

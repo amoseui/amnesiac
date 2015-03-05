@@ -9,7 +9,7 @@ public class FindGuitarTester {
 		Inventory inventory = new Inventory();
 		initializeInventory(inventory);
 		
-		GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
+		GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, 12, Wood.ALDER, Wood.ALDER);
 		
 		List<Guitar> matchingGuitars = inventory.search(whatErinLikes);
 		if (!matchingGuitars.isEmpty()) {
@@ -31,7 +31,7 @@ public class FindGuitarTester {
 	
 	private static void initializeInventory(Inventory inventory) {
 		// 기타들을 재고 목록에 등
-		GuitarSpec spec = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
+		GuitarSpec spec = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, 12, Wood.ALDER, Wood.ALDER);
 		inventory.addGuitar("V95693", 1499.95, spec);
 		inventory.addGuitar("V9512", 1549.95, spec);
 	}
