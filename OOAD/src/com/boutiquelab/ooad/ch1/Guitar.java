@@ -1,3 +1,4 @@
+package com.boutiquelab.ooad.ch1;
 
 public class Guitar {
 	
