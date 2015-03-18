@@ -1,9 +1,31 @@
-#/usr/bin/python
+#!/usr/bin/python
 
 import argparse
 
 def main():
-	print 'MAIN'
+	commands = {
+		'1.0': {
+			'integrate': 'IntegrateMethod',
+			'cherrypick': 'CherrypickMethod',
+		},	
+		'2.0': {
+			'integrate': 'IntegrateMethod',
+		},
+	}
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument("version", metavar="version", choices=commands.keys(), help="(%s)" % ' | '.join(commands.keys()))
+	version = '1.0'	
+	parser.add_argument("command", metavar="command", choices=commands[version].keys(), help="(%s)" % ' | '.join(commands[version].keys()))
+	parser.parse_args()
+
+
+
+def IntegrateMethod():
+	print "IntegrateMethod"
+
+def CherrypickMethod():
+	print "CherrypickMethod"
 
 if __name__ == "__main__":
 	main()
