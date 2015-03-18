@@ -14,12 +14,13 @@ def main():
 	}
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("version", metavar="version", choices=commands.keys(), help="(%s)" % ' | '.join(commands.keys()))
-	version = '1.0'	
-	parser.add_argument("command", metavar="command", choices=commands[version].keys(), help="(%s)" % ' | '.join(commands[version].keys()))
-	parser.parse_args()
+	subparsers = parser.add_subparsers(dest='version')
 
-
+	for key in commands.keys():
+		subparser = subparsers.add_parser(key)
+		subparser.add_argument('command', choices=commands[key].keys(), help='method for ' + key)
+	args = parser.parse_args()
+	print args
 
 def IntegrateMethod():
 	print "IntegrateMethod"
