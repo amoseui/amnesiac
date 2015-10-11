@@ -2,8 +2,8 @@
 
 ##intro
 
-wiki for almost everything 
+wiki for almost everything
 
-##test
+##link
 
-TEST
+[개발 서적 보유 목록](book.md)

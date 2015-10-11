@@ -1,8 +1,7 @@
 # amoseui wiki
 
 [config](config.md)
-[Page2](page2.md)
-[Page3](page3.md)
+[book](book.md)
 
 [SubMenuName]()
 
