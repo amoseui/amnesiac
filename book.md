@@ -19,7 +19,7 @@
 - Effective C++
 - More Effective C++
 - Effective STL
-- Modern Effective C++
+- Effective Modern C++
 - GoF 디자인 패턴 : 이렇게 활용한다
 
 ##방법론
@@ -46,6 +46,7 @@
 - 꾸준히, 자유롭게, 즐겁게 한국 오픈 소스 개발자들 이야기
 
 ##알고리즘
+- 누워서 읽는 알고리즘
 - C로 배우는 알고리즘 1
 - C로 배우는 알고리즘 2
 - C로 구현한 알고리즘
