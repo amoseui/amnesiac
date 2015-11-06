@@ -1,0 +1,33 @@
+#!/usr/bin/python
+
+import argparse
+
+def main():
+	commands = {
+		'1.0': {
+			'integrate': 'IntegrateMethod',
+			'cherrypick': 'CherrypickMethod',
+		},	
+		'2.0': {
+			'integrate': 'IntegrateMethod',
+		},
+	}
+
+	parser = argparse.ArgumentParser()
+	subparsers = parser.add_subparsers(dest='version')
+
+	for key in commands.keys():
+		subparser = subparsers.add_parser(key)
+		subparser.add_argument('command', choices=commands[key].keys(), help='method for ' + key)
+	args = parser.parse_args()
+	print args
+
+def IntegrateMethod():
+	print "IntegrateMethod"
+
+def CherrypickMethod():
+	print "CherrypickMethod"
+
+if __name__ == "__main__":
+	main()
+
