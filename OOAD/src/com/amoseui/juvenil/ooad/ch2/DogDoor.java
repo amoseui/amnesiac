@@ -1,4 +1,4 @@
-package com.boutiquelab.ooad.ch2;
+package com.amoseui.juvenil.ooad.ch2;
 
 public class DogDoor {
 	private boolean open;

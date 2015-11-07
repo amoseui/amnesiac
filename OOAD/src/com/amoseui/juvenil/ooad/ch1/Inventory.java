@@ -1,4 +1,4 @@
-package com.boutiquelab.ooad.ch1;
+package com.amoseui.juvenil.ooad.ch1;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

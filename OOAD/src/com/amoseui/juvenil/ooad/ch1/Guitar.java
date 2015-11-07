@@ -1,4 +1,4 @@
-package com.boutiquelab.ooad.ch1;
+package com.amoseui.juvenil.ooad.ch1;
 
 public class Guitar {
 	
