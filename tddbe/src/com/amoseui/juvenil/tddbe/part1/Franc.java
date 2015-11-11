@@ -2,11 +2,11 @@ package com.amoseui.juvenil.tddbe.part1;
 
 public class Franc extends Money {
 	
-	Franc(int amount) {	
-		this.amount = amount;
+	Franc(int amount, String currency) {
+		super(amount, currency);
 	}
-	
+
 	Money times(int multiplier) {
-		return new Franc(amount * multiplier);
+		return Money.franc(amount * multiplier);
 	}
 }
