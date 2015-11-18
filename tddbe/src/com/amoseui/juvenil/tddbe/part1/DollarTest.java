@@ -1,6 +1,8 @@
 package com.amoseui.juvenil.tddbe.part1;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -19,7 +21,7 @@ public class DollarTest {
 		assertEquals(Money.franc(10), five.times(2));
 		assertEquals(Money.franc(15), five.times(3));
 	}
-	
+
 	@Test
 	public void testEquality() {
 		assertTrue(Money.dollar(5).equals(Money.dollar(5)));
@@ -60,6 +62,19 @@ public class DollarTest {
 	public void testReduceMoney() {
 		Bank bank = new Bank();
 		Money result = bank.reduce(Money.dollar(1), "USD");
+		assertEquals(Money.dollar(1), result);
+	}
+
+	@Test
+	public void testIdentityRate() {
+		assertEquals(1, new Bank().rate("USD", "USD"));
+	}
+
+	@Test
+	public void testReduceMoneyDifferentCurrency() {
+		Bank bank = new Bank();
+		bank.addRate("CHF", "USD", 2);
+		Money result = bank.reduce(Money.franc(2), "USD");
 		assertEquals(Money.dollar(1), result);
 	}
 }
