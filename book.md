@@ -16,6 +16,7 @@
 ##C++
 - 열혈강의 C++ 프로그래밍
 - The C++ 프로그래밍 언어
+- Programming : Principles and Practice Using C++ (Second Edition)
 - Effective C++
 - More Effective C++
 - Effective STL
