@@ -3,9 +3,9 @@
 [config](config.md)
 [book](book.md)
 
-[SubMenuName]()
+[languages]()
 
-  * [SubPage1](subpage/page1.md)
+  * [java](java.md)
   * [SubPage2](subpage/page2.md)
   * [SubPage3](subpage/page3.md)
 
