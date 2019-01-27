@@ -23,4 +23,8 @@ autocmd BufWritePre * %s/\s\+$//e
 ```vim
 map <C-n> :pyf ~/.vim/plugged/gn/tools/gn/misc/vim/gn-format.py<CR>
 ```
-- 해결 방법: nvim 설치 
+- 해결 방법: neovim 설치
+  ```bash
+  sudo apt-get install python3-pip -y
+  sudo pip3 install neovim
+  ```
