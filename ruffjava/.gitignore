@@ -1,0 +1,15 @@
+*.class
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+/*/build/
+
+# IntelliJ
+*.iml
+.idea/
+
